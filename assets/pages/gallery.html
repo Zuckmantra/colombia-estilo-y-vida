@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Completa - Galeria de Colombia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../index.html">Colombia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/gallery.html">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/about.html">Sobre Nosotros</a>
+                </li>
+            </ul>
+            <img src="assets/img/co_colombia.avif" alt="Logo Colombia" class="navbar-logo">
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <section class="gallery">
+            <h1 class="display-4 text-center mb-5">Nuestra Colección</h1>
+            <div class="row">
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+                         data-title="El Abrazo"
+                         data-artist="Fernando Botero"
+                         data-year="1999"
+                         data-img-src="assets/img/el_abrazo_large.jpg"
+                         data-description="Una obra representativa del estilo 'Boterismo', que exagera el volumen para explorar la sensualidad y la crítica social.">
+                        <img src="assets/img/el_abrazo.jpg" class="img-fluid" alt="El Abrazo de Botero">
+                        <div class="gallery-item-info">
+                            <h5>El Abrazo</h5>
+                            <p>Fernando Botero</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+                         data-title="Horizontes"
+                         data-artist="Francisco Antonio Cano"
+                         data-year="1913"
+                         data-img-src="https://via.placeholder.com/800x600.png?text=Horizontes"
+                         data-description="Símbolo de la colonización antioqueña, esta pintura retrata la esperanza y la tenacidad de una familia campesina en busca de un nuevo futuro.">
+                        <img src="https://via.placeholder.com/400x300.png?text=Horizontes" class="img-fluid" alt="Horizontes de Cano">
+                         <div class="gallery-item-info">
+                            <h5>Horizontes</h5>
+                            <p>Francisco Antonio Cano</p>
+                        </div>
+                    </div>
+                </div>
+          
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+                         data-title="Violencia"
+                         data-artist="Alejandro Obregón"
+                         data-year="1962"
+                         data-img-src="https://via.placeholder.com/800x600.png?text=Violencia"
+                         data-description="Una poderosa obra que captura la angustia y el caos del período de La Violencia en Colombia, a través de un lenguaje expresionista y simbólico.">
+                        <img src="https://via.placeholder.com/400x300.png?text=Violencia" class="img-fluid" alt="Violencia de Obregón">
+                         <div class="gallery-item-info">
+                            <h5>Violencia</h5>
+                            <p>Alejandro Obregón</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para la imagen -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Título de la Obra</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="" class="img-fluid mb-3" id="modalImage" alt="Obra de arte en grande">
+                    <div id="modalDescription">
+                        <p><strong>Artista:</strong> <span id="modalArtist"></span></p>
+                        <p><strong>Año:</strong> <span id="modalYear"></span></p>
+                        <hr>
+                        <p id="modalText"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center text-lg-start mt-4">
+      <div class="text-center p-3">
+        <p>&copy; 2023 Galeria de Colombia. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
+
