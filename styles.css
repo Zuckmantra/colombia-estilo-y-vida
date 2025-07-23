@@ -1,26 +1,50 @@
+/* Declaración de fuentes locales */
+@font-face {
+    font-family: 'TuFuenteLocal1';
+    src: url('assets/fonts/nombre-fuente-1.woff2') format('woff2'),
+         url('assets/fonts/nombre-fuente-1.woff') format('woff'),
+         url('assets/fonts/nombre-fuente-1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TuFuenteLocal2';
+    src: url('assets/fonts/nombre-fuente-2.woff2') format('woff2'),
+         url('assets/fonts/nombre-fuente-2.woff') format('woff'),
+         url('assets/fonts/nombre-fuente-2.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Fuentes de Google como respaldo */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
 :root {
-    /* Paleta de colores principal basada en tonos tierra y dorados */
     --color-oro-principal: #D5AC34;
     --color-oro-destacado: #FEC215;
     --color-oro-suave: #AA9146;
     --color-tierra-oscuro: #55503F;
     --color-tierra-medio: #80724A;
 
-    /* Colores base para la estructura */
-    --color-fondo: #FDFBF5; /* Un beige muy claro para complementar la paleta */
-    --color-superficie: #FFFFFF; /* Blanco para tarjetas y secciones */
+    --color-fondo: #FDFBF5;
+    --color-superficie: #FFFFFF;
     --color-texto: var(--color-tierra-oscuro);
     --color-borde-sutil: #EAEAEA;
+    
+    /* Stack de fuentes mejorado */
+    --font-heading: 'TuFuenteLocal1', 'Playfair Display', serif;
+    --font-body: 'TuFuenteLocal2', 'Source Sans Pro', sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-body);
     background-color: var(--color-fondo);
     color: var(--color-texto);
     transition: background-color 0.3s ease;
 }
 
-/* --- Barra de Navegación --- */
+
 .navbar.bg-body-tertiary {
     background-color: var(--color-superficie) !important;
     border-bottom: 3px solid var(--color-oro-principal);
@@ -39,7 +63,7 @@ body {
     height: 40px;
 }
 
-/* --- Secciones y Títulos --- */
+
 .display-4 {
     color: var(--color-tierra-oscuro);
     font-weight: 300;
@@ -50,7 +74,6 @@ body {
     font-weight: 400;
 }
 
-/* --- Tarjetas de la Galería con Transiciones --- */
 .card {
     background-color: var(--color-superficie);
     border: 1px solid var(--color-borde-sutil);
@@ -58,12 +81,12 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-8px); /* Un levantamiento más pronunciado */
-    box-shadow: 0 8px 20px rgba(85, 80, 63, 0.12); /* Sombra sutil con el color de texto */
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(85, 80, 63, 0.12);
 }
 
 .card-img-top {
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    object-fit: cover;
     height: 220px;
 }
 
@@ -76,17 +99,17 @@ body {
     color: var(--color-oro-principal);
 }
 
-/* --- Footer y Overrides de Bootstrap --- */
+
 .bg-light {
     background-color: var(--color-superficie) !important;
 }
 
-/* --- Estilos para la Galería Interactiva --- */
+
 .gallery-item {
     position: relative;
-    overflow: hidden; /* Para que el overlay no se salga */
+    overflow: hidden; 
     cursor: pointer;
-    border-radius: 0.375rem; /* Coincide con el borde de las tarjetas */
+    border-radius: 0.375rem; 
     box-shadow: 0 4px 8px rgba(85, 80, 63, 0.08);
     transition: box-shadow 0.3s ease;
 }

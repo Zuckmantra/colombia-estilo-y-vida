@@ -35,20 +35,6 @@ cd exhibicion_galeria
 3. Utiliza los filtros para encontrar obras específicas
 4. Regístrate para guardar tus obras favoritas
 
-## Estructura del Proyecto
-
-```
-exhibicion_galeria/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── styles/
-│   └── utils/
-├── public/
-├── assets/
-│   └── images/
-```
-
 ## Contribución
 
 1. Haz un fork del proyecto
@@ -60,17 +46,5 @@ exhibicion_galeria/
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
-
-## Contacto
-
-- **Autor**: [Tu Nombre]
-- **Email**: [tu-email@ejemplo.com]
-- **GitHub**: [https://github.com/tu-usuario](https://github.com/tu-usuario)
-
-## Capturas de Pantalla
-
-[Agregar capturas de pantalla de la aplicación]
-
----
 
 ⭐ Si te gusta este proyecto, ¡no olvides darle una estrella!
